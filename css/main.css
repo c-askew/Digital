@@ -1,3 +1,17 @@
+@font-face {
+    font-family: MyriadLight;
+    src: url(../fonts/Myriad_Pro_Regular.ttf);
+}
+
+@font-face {
+    font-family: MyriadBold;
+    src: url(../fonts/Myriad_Pro_Bold.ttf);
+}
+
 body {
   background-color: #1f1f1f;
+}
+
+li {
+  font-family: MyriadLight;
 }
