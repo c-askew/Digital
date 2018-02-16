@@ -8,10 +8,48 @@
     src: url(../fonts/Myriad_Pro_Bold.ttf);
 }
 
+html {
+  margin: 0px;
+}
+
 body {
+  margin: 0px;
   background-color: #1f1f1f;
+}
+
+.nav-container {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-buttons {
+}
+
+ul {
+    display: flex;
+
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+
+}
+
+.active {
+  font-family: MyriadBold;
 }
 
 li {
   font-family: MyriadLight;
+  list-style-type: none;
+  padding: 40px;
+  font-size: 1.3rem;
 }
