@@ -1,4 +1,5 @@
 var tvTitleContainer = document.getElementById('title-name'); 
+var tvTimeContainer = document.getElementById('title-time');
 
 var LIST = [];                                                          
 window.onload = function () {                                           
@@ -14,13 +15,14 @@ window.onload = function () {
 function renderHTML(data) {                                                             
     var htmlStringName = "";                                                                
     for (i = 0; i < data.length; i++) {                                                   
-        htmlStringName += "<p>"+ data[i].name + "</p>"       
+        htmlStringName += data[i].name     
     }
     var htmlStringTime = "";                                                                
     for (i = 0; i < data.length; i++) {                                                   
-        htmlStringTime += "<p>"+ data[i].time + "</p>"       
+        htmlStringTime += data[i].time       
     }
 
     tvTitleContainer.insertAdjacentHTML('beforeend', htmlStringName); 
+    tvTimeContainer.insertAdjacentHTML('beforeend', htmlStringTime); 
                     
 }
