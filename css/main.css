@@ -117,4 +117,57 @@ a:hover {
   background-color: #323232;
   margin-left: 20px;
   margin-top: 20px;
+<<<<<<< HEAD
+}
+
+.arrowbox {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowbox>img {
+  height: 20%;
+}
+
+.text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box-title {
+  margin: 0px;
+  color: #FFF;
+  font-family: MyriadBold;
+  font-size: 1.5rem;
+  padding: 20px 0px 0px 20px;
+}
+
+.box-time {
+  color: #FFF;
+  font-family: MyriadLight;
+  padding-bottom: 10px;
+  padding: 0px 0px 0px 20px;
+}
+
+.box-desc {
+  width: 85%;
+  color: #FFF;
+  font-family: MyriadLight;
+  padding: 20px 0px 0px 20px;
+}
+
+.box-progress {
+  width: 100%;
+  height: 8%;
+  background-image:-webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
+  position: absolute;
+  bottom: 0;
+=======
+>>>>>>> ddcfd692c1ed6c27ddd1b5c5b4989b2394d8f567
 }
