@@ -17,6 +17,18 @@ body {
   background-color: #1f1f1f;
 }
 
+p {
+  margin: 0px;
+  font-family: MyriadLight;
+}
+
+h5 {
+  margin: 0px;
+  color: white;
+  font-family: MyriadLight;
+  font-size: 20px;
+}
+
 .nav-container {
   width: 100%;
   padding-top: 50px;
@@ -58,4 +70,51 @@ li {
 
 a:hover {
   color: grey;
+  transition: 1s ease;
+}
+
+.line-container {
+  margin-top: 50px;
+  width: 100%;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
+}
+
+.line-container>h5 {
+  padding-left: 448px
+}
+
+.tv-container {
+  width: 100%;
+  display: inline-flex;
+}
+
+.channel-container {
+  width: 300px;
+  height: 100%;
+  background-color: #1f1f1f;
+  box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
+}
+
+.channel-container>h5{
+  text-align: center;
+  padding: 115px 0px 81px 0px;
+}
+
+.block-container {
+  width: 500px;
+  height: 200px;
+  background-color: #323232;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.short-block-container {
+  width: 300px;
+  height: 200px;
+  background-color: #323232;
+  margin-left: 20px;
+  margin-top: 20px;
 }
