@@ -117,6 +117,7 @@ a:hover {
   background-color: #323232;
   margin-left: 20px;
   margin-top: 20px;
+<<<<<<< HEAD
 }
 
 .arrowbox {
@@ -167,4 +168,6 @@ a:hover {
   background-image:-webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
   position: absolute;
   bottom: 0;
+=======
+>>>>>>> ddcfd692c1ed6c27ddd1b5c5b4989b2394d8f567
 }
