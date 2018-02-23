@@ -98,7 +98,16 @@ a:hover {
   display: inline-flex;
 }
 
+
+
 .channel-container {
+  width: 300px;
+  height: 100%;
+  background-color: #1f1f1f;
+  box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
+}
+
+.on-demand-container {
   width: 300px;
   height: 100%;
   background-color: #1f1f1f;
@@ -115,6 +124,13 @@ a:hover {
   height: 200px;
   background-color: #323232;
   margin-left: 20px;
+  margin-top: 20px;
+}
+
+.block-row-container {
+  width: 100%;
+  height: 200px;
+  background-color: #323232;
   margin-top: 20px;
 }
 
@@ -368,4 +384,5 @@ a:hover {
     .gutter-sizer {
       width: 0;
     }
+}
 }
