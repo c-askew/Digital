@@ -302,6 +302,24 @@ a:hover {
   padding-bottom: 15px;
 }
 
+
+/*Signup and Login*/
+.login-form {
+  font-family: MyriadLight;
+  color: white;
+  display: block;
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: 3px solid #c4236f;
+}
+
+.login {
+  width: 50%;
+  align-items: center;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width : 900px) {
   .nav-buttons {
     margin-top: 0;
