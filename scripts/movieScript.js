@@ -39,8 +39,10 @@ function addToPopMovieArray (data) {
             backdrop: 'https://image.tmdb.org/t/p/w1400_and_h450_face' + moviesToShow[i].backdrop_path,
             rating: moviesToShow[i].vote_average,
             desc: moviesToShow[i].overview,
+            active: false,
         }
         popMovieArray.push(movieInfo);
+        initMovie(0);
     }
     displayPopMovies(popMovieArray);
 };
@@ -70,10 +72,20 @@ function displayPopMovies(popMovieArray) {
  */
 function focusMovie (e) {
     var listId = e.target.id;
-    document.getElementById('movieFocus').style.backgroundImage = 'url(' + popMovieArray[listId].backdrop + ')';
+    document.getElementById('movieFocus').src = popMovieArray[listId].backdrop;
     document.getElementById('movieTitle').innerHTML = popMovieArray[listId].title;
     document.getElementById('originTitle').innerHTML = popMovieArray[listId].originalTitle;
     document.getElementById('movieRating').innerHTML = popMovieArray[listId].rating;
     document.getElementById('movieDesc').innerHTML = popMovieArray[listId].desc;
+    popMovieArray[listId].active = true;
+    console.log(listId + ' is active');
     console.log('response ' + listId);
+}
+
+function initMovie (id) {
+  document.getElementById('movieFocus').src = popMovieArray[id].backdrop;
+  document.getElementById('movieTitle').innerHTML = popMovieArray[id].title;
+  document.getElementById('originTitle').innerHTML = popMovieArray[id].originalTitle;
+  document.getElementById('movieRating').innerHTML = popMovieArray[id].rating;
+  document.getElementById('movieDesc').innerHTML = popMovieArray[id].desc;
 }
