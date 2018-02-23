@@ -98,7 +98,16 @@ a:hover {
   display: inline-flex;
 }
 
+
+
 .channel-container {
+  width: 300px;
+  height: 100%;
+  background-color: #1f1f1f;
+  box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
+}
+
+.on-demand-container {
   width: 300px;
   height: 100%;
   background-color: #1f1f1f;
