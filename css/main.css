@@ -33,6 +33,7 @@ h5 {
 .nav-container {
   width: 100%;
   padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .navigation {
@@ -98,16 +99,7 @@ a:hover {
   display: inline-flex;
 }
 
-
-
 .channel-container {
-  width: 300px;
-  height: 100%;
-  background-color: #1f1f1f;
-  box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
-}
-
-.on-demand-container {
   width: 300px;
   height: 100%;
   background-color: #1f1f1f;
@@ -124,13 +116,6 @@ a:hover {
   height: 200px;
   background-color: #323232;
   margin-left: 20px;
-  margin-top: 20px;
-}
-
-.block-row-container {
-  width: 100%;
-  height: 200px;
-  background-color: #323232;
   margin-top: 20px;
 }
 
@@ -318,6 +303,124 @@ a:hover {
   padding-bottom: 15px;
 }
 
+/* Movie CSS */
+
+.movie-container {
+  width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  background-color: #292929;
+  position: relative;
+}
+
+.movie-pic-container {
+  width: 100%;
+  height: 65%;
+  position: relative;
+  overflow: hidden;
+}
+
+.text {
+  padding-left: 10px;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.text > h3 {
+  font-family: MyriadBold;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.text > h4 {
+  display: none;
+}
+
+#movieRating{
+  width: 30px;
+  height: 30px;
+  background-color: #ea0945;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text > p {
+  font-family: MyriadLight;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#movieFocus {
+  width: 100%;
+  min-width: 1600px;
+  height: 100%;
+  filter: blur(4px) brightness(50%);
+}
+
+#movieDesc {
+  width: 40%;
+}
+
+#movieList {
+  padding: 0px;
+}
+
+.movie-list-wrapper {
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 5px; /* remove scrollbar space */
+    transition: height 1s ease;
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar:hover {
+    height: 10px; /* remove scrollbar space */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #474646;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C02675;
+}
+
+.movie-list-wrapper ul {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+}
+
+.movie-list-wrapper li {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.movie-list-wrapper img {
+  width: 130px;
+  height: 195px;
+  opacity: 0.2;
+  transition: opacity 1s ease
+}
+
+.movie-list-wrapper img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 @media only screen and (max-width : 900px) {
   .nav-buttons {
     margin-top: 0;
@@ -366,5 +469,4 @@ a:hover {
     .gutter-sizer {
       width: 0;
     }
-}
 }
