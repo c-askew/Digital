@@ -18,6 +18,12 @@ body {
   background-color: #1f1f1f;
 }
 
+/*Image Preloader*/
+body::after {
+  display:none;
+  content: url("../assets/DigitalLogoHover.png");
+}
+
 p {
   margin: 0px;
   font-family: MyriadLight;
@@ -28,6 +34,14 @@ h5 {
   color: white;
   font-family: MyriadLight;
   font-size: 20px;
+}
+
+.logo {
+  content: url("../assets/DigitalLogo.png");
+}
+
+.logo:hover {
+  content: url("../assets/DigitalLogoHover.png");
 }
 
 .nav-container {
@@ -71,7 +85,7 @@ a {
     color: #FFF;
 }
 
-.active {
+.active li {
   font-family: MyriadBold;
 }
 
@@ -97,8 +111,6 @@ a:hover {
   width: 100%;
   display: inline-flex;
 }
-
-
 
 .channel-container {
   width: 300px;
@@ -317,14 +329,14 @@ ul {
 
 
 /* News Page CSS */
-.news-grid {
+#news-grid {
   margin: 0 auto;
   max-width: 1680px;
   padding-left: 15px;
 }
 
 /* clear fix */
-.news-grid:after {
+#news-grid:after {
   content: '';
   display: block;
   clear: both;
@@ -352,15 +364,16 @@ ul {
   margin-bottom: 5px;
 }
 
-.news-grid .cat-ondemand{ background: #a948fb; }
-.news-grid .cat-movie{ background: #c4236f; }
-.news-grid .cat-tv{ background: #fb4848; }
+#news-grid .type1{ background: #a948fb; }
+#news-grid .type2{ background: #c4236f; }
+#news-grid .type3{ background: #fb4848; }
 
 .grid-item img {
   width: 100%;
 }
 
 .grid-item h2 {
+  font-family: MyriadBold;
   font-size: 20px;
   padding: 15px 10px;
   margin: auto;
@@ -377,6 +390,13 @@ ul {
   padding-bottom: 15px;
 }
 
+#newsFooter {
+  padding: 0.4rem;
+  background-color: #1b1b1b;
+  text-align: center;
+  font-family: MyriadLight;
+  color: #505050;
+}
 
 /*Signup and Login*/
 .login-form {
