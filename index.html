@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Digital</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://d3js.org/d3.v5.js"></script>
   </head>
   <body>
     <div class="nav-container">
@@ -33,75 +34,23 @@
         <h5>103  |  ITV ONE</h5>
         <h5>104  |  CHANNEL 4</h5>
       </div>
-
-      <div class="row-on-now">
-        <div class="block-container">
+      <div class="guide-container"></div>
+      <!-- <div class="channel-row">
+        <div class="show-block">
           <div class="text-container">
             <h4 class="box-title"><div id="title-name"></div></h4>
             <h5 class="box-time"><div id="title-time"></div></h5>
             <h5 class="box-desc"><div id="title-desc"></div></h5>
-            <div class="box-progress" style="padding: 0px;"></div>
+            <!-- <div class="box-progress" style="padding: 0px;"></div> -->
           </div>
+        </div> -->
 
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
-        </div>
+
       </div>
 
-      <div class="row-on-next">
-        <div class="block-container">
-            <div class="text-container-next">
-                <h4 class="box-title-next">DUMMY TITLE</h4>
-                <p class="box-time-next">8:00 - 8:30</p>
-              </div>
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
-        </div>
-      </div>
 
-      <div class="row-after">
-        <div class="short-block-container">
-          <div class="arrowbox">
-            <img src="assets/arrow.png" alt="">
-            <img src="assets/arrow.png" alt="">
-          </div>
-        </div>
-        <div class="short-block-container">
-            <div class="arrowbox">
-                <img src="assets/arrow.png" alt="">
-                <img src="assets/arrow.png" alt="">
-              </div>
-        </div>
-        <div class="short-block-container">
-            <div class="arrowbox">
-                <img src="assets/arrow.png" alt="">
-                <img src="assets/arrow.png" alt="">
-              </div>
-        </div>
-        <div class="short-block-container">
-            <div class="arrowbox">
-                <img src="assets/arrow.png" alt="">
-                <img src="assets/arrow.png" alt="">
-              </div>
-
-        </div>
-        <div class="short-block-container">
-        </div>
-        <div class="short-block-container">
-        </div>
-        <div class="short-block-container">
-        </div>
-      </div>
 
     </div>
-    <script src="scripts/TvJson.js" charset="utf-8"></script>
+    <script src="scripts/tvjson.js" charset="utf-8"></script>
   </body>
 </html>

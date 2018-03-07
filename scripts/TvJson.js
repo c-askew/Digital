@@ -1,33 +1,54 @@
-var tvTimeContainer = document.getElementById('title-time');
-var tvDescContainer = document.getElementById('title-desc');
-var tvTitleContainer = document.getElementById('title-name'); 
+var apiURL = "http://api.tvmaze.com/schedule?country=GB&date=2018-03-06" //&date=2018-03-07
+var channels = [
+  {id: 'BBC One'},
+  {id: 'BBC Two'},
+  {id: 'ITV'},
+  {id: 'Channel 4'},
+  {id: 'Channel 5'},
+  {id: 'Really'},
+  {id: 'E4' }
+];
 
-var LIST = [];                                                          
-window.onload = function () {                                           
-    var ourRequest = new XMLHttpRequest();                             
-    ourRequest.open('GET', "data/tv-data.json");             
-    ourRequest.onload = function () {                                   
-        var ourData = JSON.parse(ourRequest.responseText);              
-        renderHTML(ourData);                                            
+/*Fetch Data
+  Fetch Channels
+  Create row for a channel
+  Match channel to data entry
+  For Loop for each entry - create programme box per Loop
+
+*/
+
+
+function fetchTV () {
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var jsonData = JSON.parse(http.responseText);
+            if (jsonData != null) {
+              console.log(jsonData);
+              filterData(jsonData);
+            }
+        }
     };
-    ourRequest.send();                                                                                                     
-}                                                                      
+    http.open('GET', apiURL, true);
+    http.send();
 
-function renderHTML(data) {                                                       
-    var htmlStringName = "";                                                                
-    for (i = 0; i < data.length; i++) {                                                   
-        htmlStringName += data[i].name     
-    }
-    var htmlStringTime = "";                                                                
-    for (i = 0; i < data.length; i++) {                                                   
-        htmlStringTime += data[i].time     
-    }
-    var htmlStringDesc = "";                                                                
-    for (i = 0; i < data.length; i++) {                                                   
-        htmlStringDesc += data[i].desc       
-    }      
+};
 
-    tvTitleContainer.insertAdjacentHTML('beforeend', htmlStringName); 
-    tvTimeContainer.insertAdjacentHTML('beforeend', htmlStringTime); 
-    tvDescContainer.insertAdjacentHTML('beforeend', htmlStringDesc);     
+function filterData (data) {
+  var showsByChannel = d3.nest()
+  .key(function(d) { return d.show.network.name; })
+  .entries(data);
+  console.log(showsByChannel)
+
+  for (i=0; i < data.length; i++) {
+    // console.log(data[i].show.network.name);
+    var showData = data[i].show;
+    var networkData = showData.network;
+
+  }
+};
+
+
+window.onload = function () {
+    fetchTV();
 }
