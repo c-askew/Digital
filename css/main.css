@@ -533,6 +533,10 @@ ul {
   cursor: pointer;
 }
 
+.selected{
+  opacity: 1 !important;
+}
+
 
 @media only screen and (max-width : 900px) {
   .nav-buttons {
