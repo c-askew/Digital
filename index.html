@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Digital</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <script src="https://d3js.org/d3.v5.js"></script>
   </head>
   <body>
@@ -28,22 +30,19 @@
 
     </div>
     <div class="tv-container">
-      <div class="channel-container">
-        <h5>101  |  BBC ONE</h5>
-        <h5>102  |  BBC TWO</h5>
-        <h5>103  |  ITV ONE</h5>
-        <h5>104  |  CHANNEL 4</h5>
+      <div id="channel-container">
+
       </div>
-      <div class="guide-container"></div>
+      <div id="guide-container"></div>
       <!-- <div class="channel-row">
         <div class="show-block">
           <div class="text-container">
             <h4 class="box-title"><div id="title-name"></div></h4>
             <h5 class="box-time"><div id="title-time"></div></h5>
             <h5 class="box-desc"><div id="title-desc"></div></h5>
-            <!-- <div class="box-progress" style="padding: 0px;"></div> -->
-          </div>
-        </div> -->
+            <div class="box-progress" style="padding: 0px;"></div>
+          </div> -->
+        </div>
 
 
       </div>
@@ -51,6 +50,9 @@
 
 
     </div>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/dragscroll.js"></script>
     <script src="scripts/tvjson.js" charset="utf-8"></script>
   </body>
 </html>
