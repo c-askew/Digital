@@ -16,14 +16,6 @@ var channels = [
   {key: 'E4' }
 ];
 
-/*Fetch Data
-  Fetch Channels
-  Create row for a channel
-  Match channel to data entry
-  For Loop for each entry - create programme box per Loop
-*/
-
-
 function fetchTV (date) {
   document.getElementById('channel-container').innerHTML = "";
   document.getElementById('guide-container').innerHTML = "";
