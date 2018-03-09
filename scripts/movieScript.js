@@ -39,7 +39,6 @@ function addToPopMovieArray (data) {
             backdrop: 'https://image.tmdb.org/t/p/w1400_and_h450_face' + moviesToShow[i].backdrop_path,
             rating: moviesToShow[i].vote_average,
             desc: moviesToShow[i].overview,
-            active: false,
         }
         popMovieArray.push(movieInfo);
         initMovie(0);
@@ -50,6 +49,7 @@ function addToPopMovieArray (data) {
  * displays the movies by creating a new li element for each one
  * the image source comes from the movie database
  * i think the base url is universal and just needs a path from the api
+ * also highlights the selected movie card by dynamically changing the class
  * @param {Array} popMovieArray - An array of trimmed movie data
  */
 function displayPopMovies(popMovieArray) {
@@ -61,7 +61,17 @@ function displayPopMovies(popMovieArray) {
         newImg.src = popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
-        document.getElementById(newImg.id).onclick = focusMovie;
+        document.getElementById(newImg.id).onclick = function (e) {
+            var selected = document.getElementsByClassName('selected')[0];
+            if (typeof selected !== 'undefined') {
+                selected.classList.remove('selected');
+            }
+            if (this !== selected) {
+                this.classList.add('selected');
+                console.log('selected');
+            }
+            focusMovie(e);
+        }
     }
     return movieList.innerHTML;
 };
@@ -77,9 +87,7 @@ function focusMovie (e) {
     document.getElementById('originTitle').innerHTML = popMovieArray[listId].originalTitle;
     document.getElementById('movieRating').innerHTML = popMovieArray[listId].rating;
     document.getElementById('movieDesc').innerHTML = popMovieArray[listId].desc;
-    popMovieArray[listId].active = true;
     console.log(listId + ' is active');
-    console.log('response ' + listId);
 }
 
 function initMovie (id) {
