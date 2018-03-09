@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Digital</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
   </head>
   <body>
     <div class="nav-container">
@@ -16,92 +19,46 @@
             <a href="ondemand.html"><li>ON DEMAND</li></a>
             <a href="news.html"><li>NEWS</li></a>
             <a href="login.html"><li>LOGIN</li></a>
+            <span class="line-break">
+            <form id="search" action="/search.html" style="display:inline;" method="get">
+              <input id="search-box" name="q" size="40" type="text" placeholder="Search"/>
+              <input id="search-btn" value="Go" type="submit"/>
+            </form>
+            </span>
           </ul>
         </div>
       </nav>
     </div>
-    <div class="line-container">
-      <h5>ON NOW</h5>
-      <h5>ON NEXT</h5>
-      <h5>AFTER</h5>
-
+    <div class="line-container" id="daysContainer">
+      <button class="dayButton selected" id="showToday" onclick="fetchTV(today)">Today</button>
+      <button class="dayButton" id="showTomorrow" onclick="fetchTV(tomorrow)">Tomorrow</button>
+      <button class="dayButton" id="showTwoDays" onclick="fetchTV(twodays)"></button>
+      <button class="dayButton" id="showThreeDays" onclick="fetchTV(threedays)"></button>
+      <button class="dayButton" id="showFourDays" onclick="fetchTV(fourdays)"></button>
+      <button class="dayButton" id="showFiveDays" onclick="fetchTV(fivedays)"></button>
     </div>
     <div class="tv-container">
-      <div class="channel-container">
-        <h5>101  |  BBC ONE</h5>
-        <h5>102  |  BBC TWO</h5>
-        <h5>103  |  ITV ONE</h5>
-        <h5>104  |  CHANNEL 4</h5>
-      </div>
+      <div id="channel-container">
 
-      <div class="row-on-now">
-        <div class="block-container">
+      </div>
+      <div id="guide-container"></div>
+      <!-- <div class="channel-row">
+        <div class="show-block">
           <div class="text-container">
             <h4 class="box-title"><div id="title-name"></div></h4>
             <h5 class="box-time"><div id="title-time"></div></h5>
             <h5 class="box-desc"><div id="title-desc"></div></h5>
             <div class="box-progress" style="padding: 0px;"></div>
-          </div>
-
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
+          </div> -->
         </div>
       </div>
-
-      <div class="row-on-next">
-        <div class="block-container">
-            <div class="text-container-next">
-                <h4 class="box-title-next">DUMMY TITLE</h4>
-                <p class="box-time-next">8:00 - 8:30</p>
-              </div>
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
-        </div>
-        <div class="block-container">
-        </div>
-      </div>
-
-      <div class="row-after">
-        <div class="short-block-container">
-          <div class="arrowbox">
-            <img src="assets/arrow.png" alt="">
-            <img src="assets/arrow.png" alt="">
-          </div>
-        </div>
-        <div class="short-block-container">
-            <div class="arrowbox">
-                <img src="assets/arrow.png" alt="">
-                <img src="assets/arrow.png" alt="">
-              </div>
-        </div>
-        <div class="short-block-container">
-            <div class="arrowbox">
-                <img src="assets/arrow.png" alt="">
-                <img src="assets/arrow.png" alt="">
-              </div>
-        </div>
-        <div class="short-block-container">
-            <div class="arrowbox">
-                <img src="assets/arrow.png" alt="">
-                <img src="assets/arrow.png" alt="">
-              </div>
-
-        </div>
-        <div class="short-block-container">
-        </div>
-        <div class="short-block-container">
-        </div>
-        <div class="short-block-container">
-        </div>
-      </div>
-
     </div>
-    <script src="scripts/TvJson.js" charset="utf-8"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/dragscroll.js"></script>
+    <script src="scripts/clamp.min.js"></script>
+    <script src="scripts/moment.min.js"></script>
+    <script src="scripts/tvjson.js" charset="utf-8"></script>
   </body>
 </html>

@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="scripts/movieScript.js"></script>
+    <title>Digital</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
   </head>
   <body>
     <div class="nav-container">
@@ -13,8 +14,8 @@
         <img class="logo" alt="logo">
         <div class="nav-buttons">
           <ul>
-            <a href="index.html"><li>TV GUIDE</li></a>
-            <a href="movies.html" class="active"><li>MOVIES</li></a>
+            <a href="index.html" class="active"><li>TV GUIDE</li></a>
+            <a href="movies.html"><li>MOVIES</li></a>
             <a href="ondemand.html"><li>ON DEMAND</li></a>
             <a href="news.html"><li>NEWS</li></a>
             <a href="login.html"><li>LOGIN</li></a>
@@ -28,36 +29,22 @@
         </div>
       </nav>
     </div>
-      <div class="movie-container">
-        <div class="movie-pic-container">
-          <img id="movieFocus"></img>
-          <div class="text">
-            <h3 id="movieTitle"></h3>
-            <h4 id="originTitle"></h4>
-            <p id="movieDesc"></p>
-            <p id="movieRating"></p>
-          </div>
+    <div id="results-container">
+      <div id="query-image"></div>
+      <div id="query-info">
 
-        </div>
-        <div class="movie-list-wrapper dragscroll">
-          <ul id="movieList">
-          </ul>
-        </div>
       </div>
-      <script src="scripts/dragscroll.js"></script>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/search.js" charset="utf-8"></script>
   </body>
 </html>
-
-
-<!--
-    <div id="movieFocus">
-      <h3 id="movieTitle"></h3>
-      <h4 id="originTitle"></h4>
-      <p id="movieRating"></p>
-      <p id="movieDesc"></p>
-    </div>
-    <div id="movieListWrapper">
-      <ul id="movieList">
-      </ul>
-    </div>
-  -->
