@@ -18,13 +18,19 @@
             <a href="ondemand.html" class="active"><li>ON DEMAND</li></a>
             <a href="news.html"><li>NEWS</li></a>
             <a href="login.html"><li>LOGIN</li></a>
+            <span class="line-break">
+            <form id="search" action="/search.html" style="display:inline;" method="get">
+              <input id="search-box" name="q" size="40" type="text" placeholder="Search"/>
+              <input id="search-btn" value="Go" type="submit"/>
+            </form>
+            </span>
           </ul>
         </div>
       </nav>
     </div>
     <div class="strip-container">
     </div>
-    <div class="block-row-container">
+    <div class="block-row-container dragscroll">
       <div class="block-image">
         <img src="assets/netflix-logo.png" alt="n">
         <div class="ondemand-wrapper">
@@ -42,7 +48,7 @@
       </div>
 
     </div>
-    <div class="block-row-container">
+    <div class="block-row-container dragscroll">
       <div class="block-image">
         <img src="assets/amazon_prime_logo.png" alt="n">
         <div class="ondemand-wrapper">
@@ -60,7 +66,7 @@
         </div>
       </div>
     </div>
-    <div class="block-row-container">
+    <div class="block-row-container dragscroll">
       <div class="block-image">
         <img src="assets/now-tv-logo.png" alt="n">
         <div class="ondemand-wrapper">
@@ -85,5 +91,6 @@
       </div>
     </div>
     </div>
+    <script src="scripts/dragscroll.js"></script>
     </body>
   </html>

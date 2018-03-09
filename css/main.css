@@ -16,6 +16,7 @@ html {
 body {
   margin: 0px;
   background-color: #1f1f1f;
+  overflow-x: hidden;
 }
 
 /*Image Preloader*/
@@ -29,10 +30,14 @@ p {
   font-family: MyriadLight;
 }
 
+b {
+  font-family: MyriadBold
+}
+
 h5 {
   margin: 0px;
   color: white;
-  font-family: MyriadLight;
+  font-family: MyriadBold;
   font-size: 20px;
 }
 
@@ -76,6 +81,7 @@ h5 {
   background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
 }
 
+
 ul {
     display: flex;
 }
@@ -93,19 +99,69 @@ a:hover {
   color: grey;
   transition: 1s ease;
 }
+#search {
+  margin: auto;
+}
+
+#search-btn {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
+  color:white;
+  font: MyriadLight;
+  padding: 10px 20px;
+  border-radius:0 50px 50px 0;
+  -moz-border-radius:0 50px 50px 0;
+  -webkit-border-radius:0 50px 50px 0;
+  -o-border-radius:0 50px 50px 0;
+  border:0 none;
+  font-weight:bold;
+  margin-left: 0;
+  outline: none;
+}
+
+#search-box {
+  background: #323232;
+  color:white;
+  font: MyriadLight;
+  padding: 10px;
+   border-radius: 50px 0 0 50px;
+  -moz-border-radius:50px 0 0 50px;
+  -webkit-border-radius:50px 0 0 50px;
+  -o-border-radius:50px 0 0 50px;
+  border:0 none;
+  width: 8vw;
+  outline: none;
+ }
 
 .line-container {
-  margin-top: 50px;
+  display: flex;
+  margin-top: 20px;
   width: 100%;
-  height: 40px;
+  height: 3rem;
   display: inline-flex;
   align-items: center;
   background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #C02675), color-stop(100, #DB1653));
 }
 
-.line-container>h5 {
-  padding-left: 448px
+.dayButton{
+  border-radius: 15px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  line-height: 2rem;
+  width: 15%;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  transition: font-size 0.2s, background 0.2s, color 0.2s;
 }
+.selected {
+  border: 2px solid #fff;
+  background-color: transparent;
+  font-family: MyriadBold;
+  font-size: 1rem;
+  color
+}
+
 
 .tv-container {
   width: 100%;
@@ -119,13 +175,19 @@ a:hover {
   box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
 }
 
-
 .channel-row{
   height: 210px;
+  padding: 0;
+  margin-bottom: 5px;
   width: 100vw;
   overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
+  cursor: -webkit-grabbing; cursor: -moz-grabbing;
+}
+
+.channel-row::-webkit-scrollbar-thumb {
+  background: #C02675;
 }
 
 .show-block {
@@ -143,16 +205,19 @@ a:hover {
 
 .on-demand-container {
   width: 300px;
-  height: 100%;
+  height: 205px;
   background-color: #1f1f1f;
   box-shadow: 7px 0px 18px 2px rgba(0,0,0,0.26);
 }
 
+.ondemand-wrapper {
+  height: 95%;
+}
+
 .channel-container {
-  box-sizing: border-box;
   width: 10vw;
   height: 200px;
-  padding: 10px;
+  padding: 5px;
   margin: 0 3px;
 }
 
@@ -172,7 +237,7 @@ a:hover {
 
 .block-row-container {
   width: 100%;
-  height: 200px;
+  height: 95%;
   background-color: #323232;
   margin-top: 30px;
   overflow-y: hidden;
@@ -210,7 +275,6 @@ ul {
   display: inline-flex;
   align-items: center;
   padding-left: 20px;
-
 }
 
 .content {
@@ -250,13 +314,13 @@ ul {
 
 .box-time {
   color: #FFF;
-  font-family: MyriadLight;
+  font-family: MyriadBold;
   padding-bottom: 10px;
   font-size: 1.2em;
 }
 
 .box-desc {
-  width: 85%;
+  width: 95%;
   color: #FFF;
   font-family: MyriadLight;
   font-size: 1em;
@@ -531,20 +595,64 @@ ul {
   cursor: pointer;
 }
 
+/*Search CSS*/
+#results-container {
+  display: flex;
+  padding: 25px;
+}
+#query-image{}
+#query-image img {
+  min-width: 250px;
+  max-width: 500px;
+}
+#query-info {
+  padding-left: 20px;
+  color: #fff;
+  font-family: MyriadLight;
+}
+#query-info h1 {
+  font-family: MyriadBold;
+  font-size: 3rem;
+  margin: 0;
+  color: #C02675;
+}
+#query-info h2 {
+  margin: 3rem 0 0 0;
+  font-size: 1.3rem;
+}
+#query-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
 
-@media only screen and (max-width : 900px) {
-  .nav-buttons {
-    margin-top: 0;
-  }
-
+@media only screen and (max-width : 1050px) {
   .nav-buttons li{
     font-size: 1.1rem;
     padding: 10px 20px 10px 20px;
     border-radius: 50px;
   }
 
+  .dayButton {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width : 900px) {
+  .nav-buttons {
+    margin-top: 0;
+  }
+
   .nav-container {
     padding-top: 25px;
+  }
+
+  .dayButton {
+    width: auto;
+    line-height: 1.4rem;
+  }
+
+  .show-block {
+    width: 40vw;
   }
 
   .news-grid {
@@ -560,16 +668,22 @@ ul {
     width: 5%;
   }
 
+
+
+
   @media only screen and (max-width : 600px) {
     .nav-buttons li{
       font-size: 0.9rem;
       padding: 10px 10px 10px 10px;
     }
 
-
     .news-grid {
       padding-left: 2%;
       max-width: 600px;
+    }
+
+    .line-break {
+      display: block;
     }
 
     .grid-item,
