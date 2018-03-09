@@ -677,6 +677,10 @@ ul {
 
 
   @media only screen and (max-width : 600px) {
+    ul, menu, dir {
+      -webkit-padding-start: 12px;
+  }
+    
     .nav-buttons li{
       font-size: 0.9rem;
       padding: 10px 10px 10px 10px;
@@ -699,5 +703,33 @@ ul {
     .gutter-sizer {
       width: 0;
     }
+
+    #ondemand-list-netflix li img {
+      width: 150px;
+      margin-left: 10px;
+    }
+    #ondemand-list-amazon li img {
+      width: 150px;
+      margin-left: 10px;
+    }
+    #ondemand-list-now li img {
+      width: 75px;
+      margin-left: 10px;
+    }
+
+    .ondname {
+      width: 25%;
+      height: 30%;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+    .block-image {
+      width: 100%;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 0px;
+  }
 }
 }
