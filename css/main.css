@@ -600,35 +600,35 @@ ul {
 }
 
 /*Search CSS*/
-#results-container {
+.resultsBlock {
   display: flex;
   padding: 25px;
 }
-#query-image{}
-#query-image img {
+.query-image{}
+.query-image img {
   min-width: 250px;
   max-width: 500px;
 }
-#query-info {
+.query-info {
   padding-left: 20px;
   color: #fff;
   font-family: MyriadLight;
 }
-#query-info h1 {
+.query-info h1 {
   font-family: MyriadBold;
   font-size: 3rem;
   margin: 0;
   color: #C02675;
 }
-#query-info h2 {
+.query-info h2 {
   margin: 3rem 0 0 0;
   font-size: 1.3rem;
 }
-#query-info h3 {
+.query-info h3 {
   margin: 0;
   font-size: 1.2rem;
 }
->>>>>>> TV-Guide
+
 
 @media only screen and (max-width : 1050px) {
   .nav-buttons li{
@@ -680,7 +680,7 @@ ul {
     ul, menu, dir {
       -webkit-padding-start: 12px;
   }
-    
+
     .nav-buttons li{
       font-size: 0.9rem;
       padding: 10px 10px 10px 10px;

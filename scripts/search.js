@@ -34,13 +34,20 @@ function displayData(data) {
   for (var i = 0; i < results.length; i++ ) {
     var curResult = 'result' + i;
     if (results[i].hasOwnProperty('title') ? name = results[i].title : name = results[i].name);
-    console.log(name)
-
+    if (results[i].poster_path != null ? posterImage = imageURL + results[i].poster_path : posterImage = "/assets/phPoster.jpg");
+    var posterImage = imageURL + results[i].poster_path;
+    var backdropImage = backdropURL + results[i].backdrop_path;
+    //Apply Backdrop Image
     $("<div>", {class: 'resultBlock', id: curResult}).appendTo(resultsContainer)
+    // if (results[i].backdrop_path != null) { $(curResult)
+      .css('background-image', 'url(' + backdropImage + ')'; 'width','100%;')
 
-      var resultEl = document.getElementById(curResult);
+    var resultEl = document.getElementById(curResult);
+
     $("<div>", {class: 'query-image', id: 'query-image'+i}).appendTo(resultEl)
-
+      .append("<img src=\""+ posterImage +"\">")
+      //Apply Poster
+    if (results[i].poster_path != null) { $("query-image"+i).css('background-image', 'url(' + backdropImage + ')') }
     $("<div>", {class: 'query-info', id: 'query-info'+i}).appendTo(resultEl)
       .append("<h4 class=\"box-title\">" + name + "</h4>")
     }
