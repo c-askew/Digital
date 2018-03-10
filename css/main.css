@@ -600,13 +600,20 @@ ul {
 }
 
 /*Search CSS*/
-.resultsBlock {
+.result-block {
   display: flex;
   padding: 25px;
+  background-repeat: no-repeat;
+}
+.backdrop-image{
+  position: fixed;
+  width: 100vw;
+  min-height: 615px;
 }
 .query-image{}
 .query-image img {
   min-width: 250px;
+  width: 20vw;
   max-width: 500px;
 }
 .query-info {
@@ -627,6 +634,11 @@ ul {
 .query-info h3 {
   margin: 0;
   font-size: 1.2rem;
+}
+
+footer img {
+  width: 200px;
+  
 }
 
 
