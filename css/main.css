@@ -607,12 +607,12 @@ ul {
 }
 .backdrop-image{
   position: fixed;
+  min-width: 1150px;
   width: 100vw;
   min-height: 615px;
 }
-.query-image{}
 .query-image img {
-  min-width: 250px;
+  min-width: 150px;
   width: 20vw;
   max-width: 500px;
 }
@@ -635,10 +635,13 @@ ul {
   margin: 0;
   font-size: 1.2rem;
 }
+.imdblink:hover {
+  color: yellow;
+}
 
 footer img {
   width: 200px;
-  
+
 }
 
 
@@ -685,10 +688,32 @@ footer img {
     width: 5%;
   }
 
+  .query-info h1 {
+    font-family: MyriadBold;
+    font-size: 2rem;
+    margin: 0;
+    color: #C02675;
+  }
+  .query-info h2 {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+  }
+  .query-info h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .query-info h4 {
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+  }
 
 
 
   @media only screen and (max-width : 600px) {
+  .active {
+    display: none
+  }
+
     ul, menu, dir {
       -webkit-padding-start: 12px;
   }
