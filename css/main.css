@@ -709,7 +709,7 @@ footer img {
 
 
 
-  @media only screen and (max-width : 600px) {
+  @media only screen and (max-width : 655px) {
   .active {
     display: none
   }
