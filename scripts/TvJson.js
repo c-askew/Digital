@@ -113,6 +113,6 @@ function buttonSetup() {
 }
 
 window.onload = function () {
-    fetchTV(tomorrow);
+    fetchTV(today);
     buttonSetup();
 };
